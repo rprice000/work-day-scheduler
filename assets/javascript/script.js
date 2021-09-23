@@ -46,16 +46,84 @@ var hourFive = document.getElementById("#hourFive")
 var textFive = document.querySelector("#textFive")
 var buttonFive = document.querySelector("#buttonFive")
 
-// buttonNine.addEventListener('click', taskNine);
 
-// function taskNine() {
-//     textNine.addEventListener("keyup", event => {
-//         localStorage.setItem("task", event.target.value);
-//     })
-    
-// }
-textNine.addEventListener("keyup", event => {
-    localStorage.setItem("task", event.target.value);
+ function saveNine() {
+     $("#buttonNine");
+     localStorage.setItem("taskNine", textNine.value);
+ }
+ buttonNine.addEventListener('click', saveNine);
+ textNine.value = localStorage.getItem("taskNine")
 
-})
+
+
+
+
+
+
+
+
+ 
+ function saveTen() {
+    $("#buttonTen");
+    localStorage.setItem("taskTen", textTen.value);
+}
+buttonTen.addEventListener('click', saveTen);
+textTen.value = localStorage.getItem("taskTen")
+
+function saveEleven() {
+    $("#buttonEleven");
+    localStorage.setItem("taskEleven", textEleven.value);
+}
+buttonEleven.addEventListener('click', saveEleven);
+textEleven.value = localStorage.getItem("taskEleven")
+
+function saveTwelve() {
+    $("#buttonTwelve");
+    localStorage.setItem("taskTwelve", textTwelve.value);
+}
+buttonTwelve.addEventListener('click', saveTwelve);
+textTwelve.value = localStorage.getItem("taskTwelve")
+
+function saveOne() {
+    $("#buttonOne");
+    localStorage.setItem("taskOne", textOne.value);
+}
+buttonOne.addEventListener('click', saveOne);
+textOne.value = localStorage.getItem("taskOne")
+
+function saveTwo() {
+    $("#buttonTwo");
+    localStorage.setItem("taskTwo", textTwo.value);
+}
+buttonTwo.addEventListener('click', saveTwo);
+textTwo.value = localStorage.getItem("taskTwo")
+
+function saveThree() {
+    $("#buttonThree");
+    localStorage.setItem("taskThree", textThree.value);
+}
+buttonThree.addEventListener('click', saveThree);
+textThree.value = localStorage.getItem("taskThree")
+
+function saveFour() {
+    $("#buttonNine");
+    localStorage.setItem("taskFour", textFour.value);
+}
+buttonFour.addEventListener('click', saveFour);
+textFour.value = localStorage.getItem("taskFour")
+
+function saveFive() {
+    $("#buttonFive");
+    localStorage.setItem("taskFive", textFive.value);
+}
+buttonFive.addEventListener('click', saveFive);
+textFive.value = localStorage.getItem("taskFive")
+
+
+ 
+
+
+
+
+
 
