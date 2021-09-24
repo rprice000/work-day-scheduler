@@ -47,14 +47,23 @@ var buttonFive = document.querySelector("#buttonFive")
 function saveNine() {
      $("#buttonNine");
      localStorage.setItem("taskNine", textNine.value);
+     document.getElementById('timeBlockNineUpdate').style.display = 'block';
+     setInterval(function(){
+        document.getElementById('timeBlockNineUpdate').style.display = 'none';
+     },3000);
  }
  buttonNine.addEventListener('click', saveNine);
  textNine.value = localStorage.getItem("taskNine")
+ 
 
 /* Function for saving Key / Value Pairs for TimeBlock Ten */
 function saveTen() {
     $("#buttonTen");
     localStorage.setItem("taskTen", textTen.value);
+    document.getElementById('timeBlockTenUpdate').style.display = 'block';
+    setInterval(function(){
+        document.getElementById('timeBlockTenUpdate').style.display = 'none';
+    },3000);
 }
 buttonTen.addEventListener('click', saveTen);
 textTen.value = localStorage.getItem("taskTen")
@@ -63,6 +72,10 @@ textTen.value = localStorage.getItem("taskTen")
 function saveEleven() {
     $("#buttonEleven");
     localStorage.setItem("taskEleven", textEleven.value);
+    document.getElementById('timeBlockElevenUpdate').style.display = 'block';
+    setInterval(function(){
+        document.getElementById('timeBlockElevenUpdate').style.display = 'none';
+    },3000);
 }
 buttonEleven.addEventListener('click', saveEleven);
 textEleven.value = localStorage.getItem("taskEleven")
@@ -234,12 +247,61 @@ textAreaColorFive();
 
 
 
-setTimeout(function(){
-   window.location.reload(1);
-}, 600000);
+ setTimeout(function(){
+    window.location.reload(1);
+ }, 600000);
 
 
 
 
 
 
+
+//  function updateEleven() {
+//    document.getElementById('timeBlockElevenUpdate').style.display = 'block';
+//    setInterval(function(){
+//      document.getElementById('timeBlockElevenUpdate').style.display = 'none';
+//    },3000);
+//  }
+
+ function updateTwelve() {
+   document.getElementById('timeBlockTwelveUpdate').style.display = 'block';
+   setInterval(function(){
+     document.getElementById('timeBlockTwelveUpdate').style.display = 'none';
+   },3000);
+ }
+
+ function updateOne() {
+   document.getElementById('timeBlockOneUpdate').style.display = 'block';
+   setInterval(function(){
+     document.getElementById('timeBlockOneUpdate').style.display = 'none';
+   },3000);
+ }
+
+ function updateTwo() {
+   document.getElementById('timeBlockTwoUpdate').style.display = 'block';
+   setInterval(function(){
+     document.getElementById('timeBlockTwoUpdate').style.display = 'none';
+   },3000);
+ }
+
+ function updateThree() {
+   document.getElementById('timeBlockThreeUpdate').style.display = 'block';
+   setInterval(function(){
+     document.getElementById('timeBlockThreeUpdate').style.display = 'none';
+   },3000);
+ }
+
+ function updateFour() {
+   document.getElementById('timeBlockFourUpdate').style.display = 'block';
+   setInterval(function(){
+     document.getElementById('timeBlockFourUpdate').style.display = 'none';
+   },3000);
+ }
+
+ function updateFive() {
+   document.getElementById('timeBlockFiveUpdate').style.display = 'block';
+   setInterval(function(){
+     document.getElementById('timeBlockFiveUpdate').style.display = 'none';
+   },3000);
+ }

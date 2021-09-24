@@ -23,10 +23,5 @@ THEN the saved events persist
 LEFT TO DO:
 - Create Function to periodically reload page every 20 minutes https://www.itsolutionstuff.com/post/automatically-refresh-or-reload-a-page-using-jquery-exampleexample.html
 - Create Function to Display when task is saved/updated/deleted
-- Description section on README
-- Screenshots file
-- Screenshots section on README
-- Copy Github and App links to README
-- Deploy app on Github
-- Save current Commits to Github
+
 - Delete instructions file 
