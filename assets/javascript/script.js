@@ -1,50 +1,34 @@
 $("#currentDay").text(moment().format('dddd MMMM Do YYYY h:mma'));
 
 
-var timeBlockNine = document.getElementById("#timeBlockNine")
-var hourNine = document.getElementById("#hourNine")
 var textNine = document.querySelector("#textNine")
 var buttonNine = document.querySelector("#buttonNine")
 
-var timeBlockTen = document.getElementById("#timeBlockTen")
-var hourTen = document.getElementById("#hourTen")
 var textTen = document.querySelector("#textTen")
 var buttonTen = document.querySelector("#buttonTen")
 
-var timeBlockEleven = document.getElementById("#timeBlockEleven")
-var hourEleven = document.getElementById("#hourEleven")
 var textEleven = document.querySelector("#textEleven")
 var buttonEleven = document.querySelector("#buttonEleven")
 
-var timeBlockTwelve = document.getElementById("#timeBlockTwelve")
-var hourTwelve = document.getElementById("#hourTwelve")
 var textTwelve = document.querySelector("#textTwelve")
 var buttonTwelve = document.querySelector("#buttonTwelve")
 
-var timeBlockOne = document.getElementById("#timeBlockOne")
-var hourOne = document.getElementById("#hourOne")
 var textOne = document.querySelector("#textOne")
 var buttonOne = document.querySelector("#buttonOne")
 
-var timeBlockTwo = document.getElementById("#timeBlockTwo")
-var hourTwo = document.getElementById("#hourTwo")
 var textTwo = document.querySelector("#textTwo")
 var buttonTwo = document.querySelector("#buttonTwo")
 
-var timeBlockThree = document.getElementById("#timeBlockThree")
-var hourThree = document.getElementById("#hourThree")
 var textThree = document.querySelector("#textThree")
 var buttonThree = document.querySelector("#buttonThree")
 
-var timeBlockFour = document.getElementById("#timeBlockFour")
-var hourFour = document.getElementById("#hourFour")
+
 var textFour = document.querySelector("#textFour")
 var buttonFour = document.querySelector("#buttonFour")
 
-var timeBlockFive = document.getElementById("#timeBlockFive")
-var hourFive = document.getElementById("#hourFive")
 var textFive = document.querySelector("#textFive")
 var buttonFive = document.querySelector("#buttonFive")
+
 
 
  function saveNine() {
@@ -54,15 +38,6 @@ var buttonFive = document.querySelector("#buttonFive")
  buttonNine.addEventListener('click', saveNine);
  textNine.value = localStorage.getItem("taskNine")
 
-
-
-
-
-
-
-
-
- 
  function saveTen() {
     $("#buttonTen");
     localStorage.setItem("taskTen", textTen.value);
@@ -118,6 +93,111 @@ function saveFive() {
 }
 buttonFive.addEventListener('click', saveFive);
 textFive.value = localStorage.getItem("taskFive")
+
+
+
+
+
+var currentHour = new Date().getHours();
+
+function textAreaColorNine() {
+    if (currentHour > 9) {
+        $("#textNine").addClass("past");
+    } else if (currentHour >= 9 && currentHour < 10) {
+       $("#textNine").addClass("present");
+    } else if (currentHour < 9) {
+       $("#textNine").addClass("future");
+    }
+}
+textAreaColorNine();
+
+function textAreaColorTen() {
+   if (currentHour > 10) {
+       $("#textTen").addClass("past");
+   } else if (currentHour >= 10 && currentHour < 11) {
+      $("#textTen").addClass("present");
+   } else if (currentHour < 10) {
+      $("#textTen").addClass("future");
+   }
+}
+textAreaColorTen();
+
+function textAreaColorEleven() {
+   if (currentHour > 11) {
+       $("#textEleven").addClass("past");
+   } else if (currentHour >= 11 && currentHour < 12) {
+      $("#textEleven").addClass("present");
+   } else if (currentHour < 11) {
+      $("#textEleven").addClass("future");
+   }
+}
+textAreaColorEleven();
+
+function textAreaColorTwelve() {
+   if (currentHour > 12) {
+       $("#textTwelve").addClass("past");
+   } else if (currentHour >= 12 && currentHour < 13) {
+      $("#textTwelve").addClass("present");
+   } else if (currentHour < 12) {
+      $("#textTwelve").addClass("future");
+   }
+}
+textAreaColorTwelve();
+
+function textAreaColorOne() {
+   if (currentHour > 13) {
+       $("#textOne").addClass("past");
+   } else if (currentHour >= 13 && currentHour < 14) {
+      $("#textOne").addClass("present");
+   } else if (currentHour < 13) {
+      $("#textOne").addClass("future");
+   }
+}
+textAreaColorOne();
+
+function textAreaColorTwo() {
+   if (currentHour > 14) {
+       $("#textTwo").addClass("past");
+   } else if (currentHour >= 14 && currentHour < 15) {
+      $("#textTwo").addClass("present");
+   } else if (currentHour < 14) {
+      $("#textTwo").addClass("future");
+   }
+}
+textAreaColorTwo();
+
+function textAreaColorThree() {
+   if (currentHour > 15) {
+       $("#textThree").addClass("past");
+   } else if (currentHour >= 15 && currentHour < 16) {
+      $("#textThree").addClass("present");
+   } else if (currentHour < 15) {
+      $("#textThree").addClass("future");
+   }
+}
+textAreaColorThree();
+
+function textAreaColorFour() {
+   if (currentHour > 16) {
+       $("#textFour").addClass("past");
+   } else if (currentHour >= 16 && currentHour < 17) {
+      $("#textFour").addClass("present");
+   } else if (currentHour < 16) {
+      $("#textFour").addClass("future");
+   }
+}
+textAreaColorFour();
+
+function textAreaColorFive() {
+   if (currentHour > 17) {
+       $("#textFive").addClass("past");
+   } else if (currentHour >= 17 && currentHour < 18) {
+      $("#textFive").addClass("present");
+   } else if (currentHour < 17) {
+      $("#textFive").addClass("future");
+   }
+}
+textAreaColorFive();
 
 
  
