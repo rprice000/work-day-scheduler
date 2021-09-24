@@ -1,50 +1,65 @@
+/* Moment.js format for displaying 'Day of Week' 'Month' 'Day' 'Year' 'Time: in Hour and Minutes with AM or PM' */
 $("#currentDay").text(moment().format('dddd MMMM Do YYYY h:mma'));
 
+// SETTING VARIABLES FOR ALL FUNCTIONS START
 
+/* Sets variables for TimeBlock Nine textarea and button */
 var textNine = document.querySelector("#textNine")
 var buttonNine = document.querySelector("#buttonNine")
 
+/* Sets variables for TimeBlock Ten textarea and button */
 var textTen = document.querySelector("#textTen")
 var buttonTen = document.querySelector("#buttonTen")
 
+/* Sets variables for TimeBlock Eleven textarea and button */
 var textEleven = document.querySelector("#textEleven")
 var buttonEleven = document.querySelector("#buttonEleven")
 
+/* Sets variables for TimeBlock Twleve textarea and button */
 var textTwelve = document.querySelector("#textTwelve")
 var buttonTwelve = document.querySelector("#buttonTwelve")
 
+/* Sets variables for TimeBlock One textarea and button */
 var textOne = document.querySelector("#textOne")
 var buttonOne = document.querySelector("#buttonOne")
 
+/* Sets variables for TimeBlock Two textarea and button */
 var textTwo = document.querySelector("#textTwo")
 var buttonTwo = document.querySelector("#buttonTwo")
 
+/* Sets variables for TimeBlock Three textarea and button */
 var textThree = document.querySelector("#textThree")
 var buttonThree = document.querySelector("#buttonThree")
 
-
+/* Sets variables for TimeBlock Four textarea and button */
 var textFour = document.querySelector("#textFour")
 var buttonFour = document.querySelector("#buttonFour")
 
+/* Sets variables for TimeBlock Five textarea and button */
 var textFive = document.querySelector("#textFive")
 var buttonFive = document.querySelector("#buttonFive")
 
+// SETTING VARIABLES FOR ALL FUNCTIONS END
 
+// FUNCTIONS FOR SAVING DATA TO LOCAL STORAGE START
 
- function saveNine() {
+/* Function for saving Key / Value Pairs for TimeBlock Nine */
+function saveNine() {
      $("#buttonNine");
      localStorage.setItem("taskNine", textNine.value);
  }
  buttonNine.addEventListener('click', saveNine);
  textNine.value = localStorage.getItem("taskNine")
 
- function saveTen() {
+/* Function for saving Key / Value Pairs for TimeBlock Ten */
+function saveTen() {
     $("#buttonTen");
     localStorage.setItem("taskTen", textTen.value);
 }
 buttonTen.addEventListener('click', saveTen);
 textTen.value = localStorage.getItem("taskTen")
 
+/* Function for saving Key / Value Pairs for TimeBlock Eleven */
 function saveEleven() {
     $("#buttonEleven");
     localStorage.setItem("taskEleven", textEleven.value);
@@ -52,6 +67,7 @@ function saveEleven() {
 buttonEleven.addEventListener('click', saveEleven);
 textEleven.value = localStorage.getItem("taskEleven")
 
+/* Function for saving Key / Value Pairs for TimeBlock Twelve */
 function saveTwelve() {
     $("#buttonTwelve");
     localStorage.setItem("taskTwelve", textTwelve.value);
@@ -59,6 +75,7 @@ function saveTwelve() {
 buttonTwelve.addEventListener('click', saveTwelve);
 textTwelve.value = localStorage.getItem("taskTwelve")
 
+/* Function for saving Key / Value Pairs for TimeBlock One */
 function saveOne() {
     $("#buttonOne");
     localStorage.setItem("taskOne", textOne.value);
@@ -66,6 +83,7 @@ function saveOne() {
 buttonOne.addEventListener('click', saveOne);
 textOne.value = localStorage.getItem("taskOne")
 
+/* Function for saving Key / Value Pairs for TimeBlock Two */
 function saveTwo() {
     $("#buttonTwo");
     localStorage.setItem("taskTwo", textTwo.value);
@@ -73,6 +91,7 @@ function saveTwo() {
 buttonTwo.addEventListener('click', saveTwo);
 textTwo.value = localStorage.getItem("taskTwo")
 
+/* Function for saving Key / Value Pairs for TimeBlock Three */
 function saveThree() {
     $("#buttonThree");
     localStorage.setItem("taskThree", textThree.value);
@@ -80,6 +99,7 @@ function saveThree() {
 buttonThree.addEventListener('click', saveThree);
 textThree.value = localStorage.getItem("taskThree")
 
+/* Function for saving Key / Value Pairs for TimeBlock Four */
 function saveFour() {
     $("#buttonNine");
     localStorage.setItem("taskFour", textFour.value);
@@ -87,6 +107,7 @@ function saveFour() {
 buttonFour.addEventListener('click', saveFour);
 textFour.value = localStorage.getItem("taskFour")
 
+/* Function for saving Key / Value Pairs for TimeBlock Five */
 function saveFive() {
     $("#buttonFive");
     localStorage.setItem("taskFive", textFive.value);
@@ -94,12 +115,14 @@ function saveFive() {
 buttonFive.addEventListener('click', saveFive);
 textFive.value = localStorage.getItem("taskFive")
 
+// FUNCTIONS FOR SAVING DATA TO LOCAL STORAGE END
 
+// FUNCTIONS FOR CHANGING TEXTAREA BACKGROUND COLOR START
 
-
-
+/* Creates variable that holds current hour of the day */
 var currentHour = new Date().getHours();
 
+/* Function for chaning textarea background color for TimeBlock Nine */
 function textAreaColorNine() {
     if (currentHour > 9) {
         $("#textNine").addClass("past");
@@ -111,6 +134,7 @@ function textAreaColorNine() {
 }
 textAreaColorNine();
 
+/* Function for chaning textarea background color for TimeBlock Ten */
 function textAreaColorTen() {
    if (currentHour > 10) {
        $("#textTen").addClass("past");
@@ -122,6 +146,7 @@ function textAreaColorTen() {
 }
 textAreaColorTen();
 
+/* Function for chaning textarea background color for TimeBlock Eleven */
 function textAreaColorEleven() {
    if (currentHour > 11) {
        $("#textEleven").addClass("past");
@@ -133,6 +158,7 @@ function textAreaColorEleven() {
 }
 textAreaColorEleven();
 
+/* Function for chaning textarea background color for TimeBlock Twelve */
 function textAreaColorTwelve() {
    if (currentHour > 12) {
        $("#textTwelve").addClass("past");
@@ -144,6 +170,7 @@ function textAreaColorTwelve() {
 }
 textAreaColorTwelve();
 
+/* Function for chaning textarea background color for TimeBlock One */
 function textAreaColorOne() {
    if (currentHour > 13) {
        $("#textOne").addClass("past");
@@ -155,6 +182,7 @@ function textAreaColorOne() {
 }
 textAreaColorOne();
 
+/* Function for chaning textarea background color for TimeBlock Two */
 function textAreaColorTwo() {
    if (currentHour > 14) {
        $("#textTwo").addClass("past");
@@ -166,6 +194,7 @@ function textAreaColorTwo() {
 }
 textAreaColorTwo();
 
+/* Function for chaning textarea background color for TimeBlock Three */
 function textAreaColorThree() {
    if (currentHour > 15) {
        $("#textThree").addClass("past");
@@ -177,6 +206,7 @@ function textAreaColorThree() {
 }
 textAreaColorThree();
 
+/* Function for chaning textarea background color for TimeBlock Four */
 function textAreaColorFour() {
    if (currentHour > 16) {
        $("#textFour").addClass("past");
@@ -188,6 +218,7 @@ function textAreaColorFour() {
 }
 textAreaColorFour();
 
+/* Function for chaning textarea background color for TimeBlock Five */
 function textAreaColorFive() {
    if (currentHour > 17) {
        $("#textFive").addClass("past");
@@ -199,8 +230,13 @@ function textAreaColorFive() {
 }
 textAreaColorFive();
 
+// FUNCTIONS FOR CHANGING TEXTAREA BACKGROUND COLOR END
 
- 
+
+
+setTimeout(function(){
+   window.location.reload(1);
+}, 600000);
 
 
 
