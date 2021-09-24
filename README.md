@@ -5,7 +5,7 @@
 
 
 # Description
-
+This web application allows users to save task by the hour in local storage of their machine.  The web application deisplays the current date and time.  The time blocks will change from Green to Red to Gray to help the user understand that tasks are coming up, due that hour, or past due.
 
 
 # Installation
@@ -30,10 +30,10 @@
 # Links
 
 - GitHub Repository Link
-
+https://github.com/rprice000/work-day-scheduler
 
 - Website Link
-
+https://rprice000.github.io/work-day-scheduler/
 
 # Version
 
