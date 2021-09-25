@@ -1,6 +1,11 @@
 /* Moment.js format for displaying 'Day of Week' 'Month' 'Day' 'Year' 'Time: in Hour and Minutes with AM or PM' */
 $("#currentDay").text(moment().format('dddd MMMM Do YYYY h:mma'));
 
+/* Function to periodically reload the web page */
+setTimeout(function(){
+   window.location.reload(1);
+}, 600000);
+
 // SETTING VARIABLES FOR ALL FUNCTIONS START
 
 /* Sets variables for TimeBlock Nine textarea and button */
@@ -84,7 +89,11 @@ textEleven.value = localStorage.getItem("taskEleven")
 function saveTwelve() {
     $("#buttonTwelve");
     localStorage.setItem("taskTwelve", textTwelve.value);
-}
+    document.getElementById('timeBlockTwelveUpdate').style.display = 'block';
+    setInterval(function(){
+        document.getElementById('timeBlockTwelveUpdate').style.display = 'none';
+   },3000);
+ }
 buttonTwelve.addEventListener('click', saveTwelve);
 textTwelve.value = localStorage.getItem("taskTwelve")
 
@@ -92,7 +101,11 @@ textTwelve.value = localStorage.getItem("taskTwelve")
 function saveOne() {
     $("#buttonOne");
     localStorage.setItem("taskOne", textOne.value);
-}
+    document.getElementById('timeBlockOneUpdate').style.display = 'block';
+    setInterval(function(){
+         document.getElementById('timeBlockOneUpdate').style.display = 'none';
+      },3000);
+    }
 buttonOne.addEventListener('click', saveOne);
 textOne.value = localStorage.getItem("taskOne")
 
@@ -100,7 +113,11 @@ textOne.value = localStorage.getItem("taskOne")
 function saveTwo() {
     $("#buttonTwo");
     localStorage.setItem("taskTwo", textTwo.value);
-}
+    document.getElementById('timeBlockTwoUpdate').style.display = 'block';
+    setInterval(function(){
+         document.getElementById('timeBlockTwoUpdate').style.display = 'none';
+      },3000);
+    }
 buttonTwo.addEventListener('click', saveTwo);
 textTwo.value = localStorage.getItem("taskTwo")
 
@@ -108,15 +125,23 @@ textTwo.value = localStorage.getItem("taskTwo")
 function saveThree() {
     $("#buttonThree");
     localStorage.setItem("taskThree", textThree.value);
-}
+    document.getElementById('timeBlockThreeUpdate').style.display = 'block';
+    setInterval(function(){
+         document.getElementById('timeBlockThreeUpdate').style.display = 'none';
+      },3000);
+    }
 buttonThree.addEventListener('click', saveThree);
 textThree.value = localStorage.getItem("taskThree")
 
 /* Function for saving Key / Value Pairs for TimeBlock Four */
 function saveFour() {
-    $("#buttonNine");
+    $("#buttonFour");
     localStorage.setItem("taskFour", textFour.value);
-}
+    document.getElementById('timeBlockFourUpdate').style.display = 'block';
+    setInterval(function(){
+         document.getElementById('timeBlockFourUpdate').style.display = 'none';
+      },3000);
+    }
 buttonFour.addEventListener('click', saveFour);
 textFour.value = localStorage.getItem("taskFour")
 
@@ -124,7 +149,11 @@ textFour.value = localStorage.getItem("taskFour")
 function saveFive() {
     $("#buttonFive");
     localStorage.setItem("taskFive", textFive.value);
-}
+    document.getElementById('timeBlockFiveUpdate').style.display = 'block';
+    setInterval(function(){
+         document.getElementById('timeBlockFiveUpdate').style.display = 'none';
+      },3000);
+    }
 buttonFive.addEventListener('click', saveFive);
 textFive.value = localStorage.getItem("taskFive")
 
@@ -244,64 +273,3 @@ function textAreaColorFive() {
 textAreaColorFive();
 
 // FUNCTIONS FOR CHANGING TEXTAREA BACKGROUND COLOR END
-
-
-
- setTimeout(function(){
-    window.location.reload(1);
- }, 600000);
-
-
-
-
-
-
-
-//  function updateEleven() {
-//    document.getElementById('timeBlockElevenUpdate').style.display = 'block';
-//    setInterval(function(){
-//      document.getElementById('timeBlockElevenUpdate').style.display = 'none';
-//    },3000);
-//  }
-
- function updateTwelve() {
-   document.getElementById('timeBlockTwelveUpdate').style.display = 'block';
-   setInterval(function(){
-     document.getElementById('timeBlockTwelveUpdate').style.display = 'none';
-   },3000);
- }
-
- function updateOne() {
-   document.getElementById('timeBlockOneUpdate').style.display = 'block';
-   setInterval(function(){
-     document.getElementById('timeBlockOneUpdate').style.display = 'none';
-   },3000);
- }
-
- function updateTwo() {
-   document.getElementById('timeBlockTwoUpdate').style.display = 'block';
-   setInterval(function(){
-     document.getElementById('timeBlockTwoUpdate').style.display = 'none';
-   },3000);
- }
-
- function updateThree() {
-   document.getElementById('timeBlockThreeUpdate').style.display = 'block';
-   setInterval(function(){
-     document.getElementById('timeBlockThreeUpdate').style.display = 'none';
-   },3000);
- }
-
- function updateFour() {
-   document.getElementById('timeBlockFourUpdate').style.display = 'block';
-   setInterval(function(){
-     document.getElementById('timeBlockFourUpdate').style.display = 'none';
-   },3000);
- }
-
- function updateFive() {
-   document.getElementById('timeBlockFiveUpdate').style.display = 'block';
-   setInterval(function(){
-     document.getElementById('timeBlockFiveUpdate').style.display = 'none';
-   },3000);
- }

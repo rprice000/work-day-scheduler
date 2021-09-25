@@ -5,7 +5,7 @@
 
 
 # Description
-This web application allows users to save task by the hour in local storage of their machine.  The web application deisplays the current date and time.  The time blocks will change from Green to Red to Gray to help the user understand that tasks are coming up, due that hour, or past due.
+This web application allows users to save task by the hour in local storage of their machine.  The web application deisplays the current date and time.  The time blocks will change from Green to Red to Gray to help the user understand that tasks are coming up, due that hour, or past due.  The web page will reload peridocially to check if the user has entered, changed, or deleted tasks.  Tasks are saved in the local storage of the device that is accessin the web application.
 
 
 # Installation
